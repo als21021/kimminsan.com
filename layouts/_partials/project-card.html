@@ -1,0 +1,14 @@
+<article class="card">
+  {{- with .Params.cover }}{{ with $.Resources.Get . }}
+  {{- $img := .Fill "640x360 webp" }}
+  <a href="{{ $.RelPermalink }}" class="card-cover" tabindex="-1" aria-hidden="true">
+    <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="" loading="lazy">
+  </a>
+  {{- end }}{{ end }}
+  <div class="card-body">
+    <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{- with .Params.board }}<p class="card-board">{{ . }}</p>{{ end }}
+    {{- with .Params.summary }}<p class="card-summary">{{ . }}</p>{{ end }}
+    {{- partial "tech-list.html" .Params.tech }}
+  </div>
+</article>

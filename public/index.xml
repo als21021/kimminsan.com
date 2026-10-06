@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>My New Hugo Project</title>
-    <link>https://kimminsan.com/</link>
-    <description>Recent content on My New Hugo Project</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="https://kimminsan.com/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>홈 on 김민산</title><link>https://kimminsan.com/</link><description>Recent content in 홈 on 김민산</description><generator>Hugo</generator><language>ko-KR</language><atom:link href="https://kimminsan.com/index.xml" rel="self" type="application/rss+xml"/><item><title>소개</title><link>https://kimminsan.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kimminsan.com/about/</guid><description>&lt;p&gt;임베디드 소프트웨어 개발자를 지망하는 김민산입니다. &lt;/p&gt;&#10;&lt;h2 id="기술-스택"&gt;기술 스택&lt;/h2&gt;&#10;&lt;table&gt;&#10;&#9;&lt;thead&gt;&#10;&#9;&#9;&#9;&lt;tr&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;th&gt;분야&lt;/th&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;th&gt;기술&lt;/th&gt;&#10;&#9;&#9;&#9;&lt;/tr&gt;&#10;&#9;&lt;/thead&gt;&#10;&#9;&lt;tbody&gt;&#10;&#9;&#9;&#9;&lt;tr&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;td&gt;언어&lt;/td&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;td&gt;C, C++&lt;/td&gt;&#10;&#9;&#9;&#9;&lt;/tr&gt;&#10;&#9;&#9;&#9;&lt;tr&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;td&gt;MCU&lt;/td&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;td&gt;STM32 (HAL / LL / 레지스터 직접 제어)&lt;/td&gt;&#10;&#9;&#9;&#9;&lt;/tr&gt;&#10;&#9;&#9;&#9;&lt;tr&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;td&gt;통신&lt;/td&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;td&gt;UART, SPI, I2C, CAN&lt;/td&gt;&#10;&#9;&#9;&#9;&lt;/tr&gt;&#10;&#9;&#9;&#9;&lt;tr&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;td&gt;RTOS&lt;/td&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;td&gt;FreeRTOS&lt;/td&gt;&#10;&#9;&#9;&#9;&lt;/tr&gt;&#10;&#9;&#9;&#9;&lt;tr&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;td&gt;도구&lt;/td&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;td&gt;STM32CubeIDE, Git, 오실로스코프, 로직 애널라이저&lt;/td&gt;&#10;&#9;&#9;&#9;&lt;/tr&gt;&#10;&#9;&lt;/tbody&gt;&#10;&lt;/table&gt;&#10;&lt;h2 id="이력"&gt;이력&lt;/h2&gt;&#10;&lt;ul&gt;&#10;&lt;li&gt;&lt;strong&gt;YYYY.MM – YYYY.MM&lt;/strong&gt; · 학교 / 학과 &lt;/li&gt;&#10;&lt;li&gt;&lt;strong&gt;YYYY.MM&lt;/strong&gt; · 프로젝트 / 수상 / 교육 &lt;/li&gt;&#10;&lt;/ul&gt;</description></item></channel></rss>

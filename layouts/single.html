@@ -1,0 +1,22 @@
+{{ define "main" }}
+<article class="article">
+  <header class="article-head">
+    <h1>{{ .Title }}</h1>
+    {{- if eq .Section "posts" }}
+    <p class="meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+      · {{ .ReadingTime }}분
+      {{- with .GetTerms "tags" }} ·{{ range . }} <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>{{ end }}{{ end }}
+    </p>
+    {{- end }}
+  </header>
+  {{- partial "toc.html" . }}
+  <div class="prose">{{ .Content }}</div>
+</article>
+{{- if eq .Section "posts" }}
+<nav class="pager" aria-label="이전/다음 글">
+  {{- with .NextInSection }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+  {{- with .PrevInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ else }}<span></span>{{ end }}
+</nav>
+{{- end }}
+{{ end }}

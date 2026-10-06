@@ -1,0 +1,33 @@
+{{ define "main" }}
+<section class="hero">
+  <h1>{{ site.Params.author }}</h1>
+  <p class="hero-desc">{{ site.Params.description }}</p>
+  {{- partial "links.html" . }}
+  {{- .Content }}
+</section>
+
+{{- $projects := where (where site.RegularPages "Section" "projects") "Params.featured" true }}
+{{- with $projects }}
+<section>
+  <div class="section-head">
+    <h2>주요 프로젝트</h2>
+    <a href="{{ "projects/" | relURL }}">전체 보기 →</a>
+  </div>
+  <div class="card-grid">
+    {{- range . }}{{ partial "project-card.html" . }}{{ end }}
+  </div>
+</section>
+{{- end }}
+
+{{- with first 5 (where site.RegularPages "Section" "posts") }}
+<section>
+  <div class="section-head">
+    <h2>최근 글</h2>
+    <a href="{{ "posts/" | relURL }}">전체 보기 →</a>
+  </div>
+  <ul class="post-list">
+    {{- range . }}{{ partial "post-item.html" . }}{{ end }}
+  </ul>
+</section>
+{{- end }}
+{{ end }}

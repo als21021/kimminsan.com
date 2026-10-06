@@ -1,0 +1,5 @@
+<span class="links">
+  {{- with site.Params.github }}<a href="{{ . }}" rel="me noopener">GitHub</a>{{ end }}
+  {{- with site.Params.email }}<a href="mailto:{{ . }}">Mail</a>{{ end }}
+  <a href="{{ "index.xml" | relURL }}">RSS</a>
+</span>
