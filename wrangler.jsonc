@@ -6,6 +6,6 @@
     { "pattern": "kimminsan.com", "custom_domain": true },
     { "pattern": "www.kimminsan.com", "custom_domain": true }
   ],
-  "workers_dev": true,
+  "workers_dev": false,
   "preview_urls": false
 }
