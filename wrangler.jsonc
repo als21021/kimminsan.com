@@ -1,7 +1,11 @@
 {
   "name": "kimminsan-com",
   "compatibility_date": "2026-10-01",
-  "assets": {
-    "directory": "./public"
-  }
+  "assets": { "directory": "./public" },
+  "routes": [
+    { "pattern": "kimminsan.com", "custom_domain": true },
+    { "pattern": "www.kimminsan.com", "custom_domain": true }
+  ],
+  "workers_dev": true,
+  "preview_urls": false
 }
