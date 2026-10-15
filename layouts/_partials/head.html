@@ -13,6 +13,10 @@
 {{- with .Params.cover }}{{ with $.Resources.Get . }}
 <meta property="og:image" content="{{ .Permalink }}">
 {{- end }}{{ end }}
+{{- if .IsHome }}{{ with .Params.photo }}{{ with resources.Get . }}
+{{- $og := .Fill "600x600 Top jpg q85" }}
+<meta property="og:image" content="{{ $og.Permalink }}">
+{{- end }}{{ end }}{{ end }}
 {{- with .OutputFormats.Get "rss" }}
 <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">
 {{- end }}

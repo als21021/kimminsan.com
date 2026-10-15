@@ -72,9 +72,45 @@ h1, h2, h3, h4 { line-height: 1.35; letter-spacing: -0.01em; }
 .links { display: inline-flex; gap: 1rem; flex-wrap: wrap; }
 
 /* ---------- 홈 ---------- */
-.hero { margin-bottom: 3rem; }
-.hero h1 { font-size: 2.2rem; margin: 0 0 0.25rem; }
-.hero-desc { color: var(--fg-muted); font-size: 1.15rem; margin: 0 0 1rem; }
+.intro {
+  display: grid;
+  grid-template-columns: 184px 1fr;
+  grid-template-areas: "photo head" "photo facts";
+  grid-template-rows: auto 1fr;
+  column-gap: 2rem;
+  row-gap: 1.25rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+.intro-photo {
+  grid-area: photo; display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover;
+  border-radius: var(--radius); border: 1px solid var(--border); background: var(--bg-soft);
+}
+.intro-head { grid-area: head; }
+.intro-role { margin: 0 0 0.2rem; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.02em; color: var(--accent); }
+.intro-head h1 { font-size: 2.2rem; margin: 0 0 0.15rem; }
+.hero-desc { color: var(--fg-muted); font-size: 1.1rem; margin: 0 0 0.9rem; }
+.intro-head .links a {
+  font-size: 0.88rem; padding: 0.2rem 0.75rem; border: 1px solid var(--border); border-radius: 999px; color: var(--fg);
+}
+.intro-head .links { gap: 0.5rem; }
+.intro-head .links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.intro-facts {
+  grid-area: facts; align-self: end; margin: 0;
+  display: grid; grid-template-columns: max-content 1fr; gap: 0.3rem 1.25rem; font-size: 0.95rem;
+}
+.intro-facts div { display: contents; }
+.intro-facts dt { color: var(--fg-muted); }
+.intro-facts dd { margin: 0; }
+.intro-text { margin: 2rem 0 1rem; }
+.intro-text p { margin: 0 0 0.9rem; }
+.intro-text p:first-child { font-size: 1.15rem; font-weight: 600; }
+@media (max-width: 560px) {
+  .intro { grid-template-columns: 104px 1fr; grid-template-areas: "photo head" "facts facts"; column-gap: 1.1rem; }
+  .intro-head h1 { font-size: 1.7rem; }
+  .hero-desc { font-size: 0.98rem; }
+  .intro-facts { align-self: start; }
+}
 .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin: 2.5rem 0 1rem; }
 .section-head h2 { margin: 0; font-size: 1.3rem; }
 .section-head a { font-size: 0.9rem; }

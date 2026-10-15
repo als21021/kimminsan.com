@@ -1,10 +1,27 @@
 {{ define "main" }}
-<section class="hero">
-  <h1>{{ site.Params.author }}</h1>
-  <p class="hero-desc">{{ site.Params.description }}</p>
-  {{- partial "links.html" . }}
-  {{- .Content }}
+<section class="intro" aria-label="자기소개">
+  {{- with .Params.photo }}{{ with resources.Get . }}
+  {{- $img := .Fill "480x600 Top webp q85" }}
+  <img class="intro-photo" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ site.Params.author }} 프로필 사진" fetchpriority="high">
+  {{- end }}{{ end }}
+  <div class="intro-head">
+    {{- with .Params.role }}<p class="intro-role">{{ . }}</p>{{ end }}
+    <h1>{{ site.Params.author }}</h1>
+    <p class="hero-desc">{{ site.Params.description }}</p>
+    {{- partial "links.html" . }}
+  </div>
+  {{- with .Params.facts }}
+  <dl class="intro-facts">
+    {{- range . }}
+    <div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>
+    {{- end }}
+  </dl>
+  {{- end }}
 </section>
+
+{{- with .Content }}
+<div class="intro-text prose">{{ . }}</div>
+{{- end }}
 
 {{- $projects := where (where site.RegularPages "Section" "projects") "Params.featured" true }}
 {{- with $projects }}
